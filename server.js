@@ -14,7 +14,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/ui/gopi1.html', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+    res.sendFile(path.join(__dirname, 'ui', 'gopi1.html'));
 });
 
 app.get('/gopi2', function(req,res){
