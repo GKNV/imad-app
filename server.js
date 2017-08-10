@@ -17,6 +17,18 @@ app.get('/ui/gopi1.html', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'gopi1.html'));
 });
 
+
+
+app.get('/ui/gopi2.html', function(req,res){
+    res.sendFile(path.join(__dirname, 'ui', 'gopi2.html'));
+});
+
+
+
+app.get('/ui/gopi3.html', function(req,res){
+    res.sendFile(path.join(__dirname, 'ui', 'gopi3.html'));
+});
+
 app.get('/gopi2', function(req,res){
     res.send("test page2");
 });
