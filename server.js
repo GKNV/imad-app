@@ -6,7 +6,9 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var Articleone ={
+var articles= { 
+
+'Article-one':{
     title: 'gopi1',
     heading:'Article-one',
     date:'Aug 10,2017',
@@ -16,6 +18,27 @@ var Articleone ={
 <p>Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works</p>    
     `
     
+},
+'Article-two':{  
+    title: 'gopi2',
+    heading:'Article-two',
+    date:'Aug 10,2017',
+    content:`
+<p>Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works</p>
+<p>Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works</p>
+   
+    `
+    
+},
+'Article-three':{
+    
+      title: 'gopi3',
+    heading:'Article-three',
+    date:'Aug 10,2017',
+    content:`
+<p>Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works Hi , This is first test html page. To check how html works</p>    
+    `
+},
 };
 
 
@@ -71,8 +94,8 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/gopi1.html', function(req,res){
-    res.send(createTemplate(Articleone));
+app.get('/:articlesName', function(req,res){
+    res.send(createTemplate(articlesName));
 });
 
 
