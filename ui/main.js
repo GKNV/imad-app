@@ -14,7 +14,7 @@ request.onreadystatechange= function(){
     }
 };
 
-request.open('GET', "http://gopikanna09.imad.hasura-app.io/counter", true);
+request.open("GET", "http://gopikanna09.imad.hasura-app.io/counter", true);
 request.send(null);
 };
 
