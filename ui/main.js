@@ -19,11 +19,11 @@
 var button= document.getElementById('counter');
 button.onclick = function(){
 
-var httpRequest = new XMLHttpRequest();
+var request = new XMLHttpRequest();
 
-httpRequest.onreadystatechange= function(){
-    if(httpRequest.readyState === XMLHttpRequest.Done){
-        if(httpRequest.status === 200){
+request.onreadystatechange= function(){
+    if(request.readyState === XMLHttpRequest.Done){
+        if(request.status === 200){
             var counter = request.responseText;
             var span = document.getElementById('count');
             span.innerHTML= counter.toString();
@@ -31,6 +31,6 @@ httpRequest.onreadystatechange= function(){
     }
 };
 
-httpRequest.open('GET', 'http://gopikanna09.imad.hasura-app.io/counter', true);
-httpRequest.send();
+request.open('GET', 'http://gopikanna09.imad.hasura-app.io/counter', true);
+request.send();
 };
