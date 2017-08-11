@@ -95,7 +95,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/:articlesName', function(req,res){
-    res.send(createTemplate(articlesName));
+    res.send(createTemplate(articles[articlesName]));
 });
 
 
