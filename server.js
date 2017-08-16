@@ -128,7 +128,7 @@ app.get('/submit-name/:name', function(req,res) {
     
     var name = req.params.name;
     
-    name.push(name);
+    names.push(name);
     res.send(JSON.stringify(names));
 });
 
