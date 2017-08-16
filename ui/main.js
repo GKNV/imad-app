@@ -47,7 +47,7 @@ for(var i=0; i< names.length;i++){
 
 var nameInput=document.getElementById('name');
 var name = nameInput.value;
-    request.open("GET", "http://gopikanna09.imad.hasura-app.io/submit-name?name=" +name, true);
-    request.send(); 
-    console.log('EXECUTED');
+    request.open("GET", "http://gopikanna09.imad.hasura-app.io/submit-name?name=" + name, true);
+    request.send(null); 
+    
 };
