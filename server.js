@@ -7,8 +7,8 @@ var config={
     user:'gopikanna09',
     database:'gopikanna09',
     host:'db.imad.hasura-app.io',
-    port:'80',
-    password:'process.env.DB_PASSWORD'
+    port:'5432',
+    password:process.env.DB_PASSWORD
 };
 
 
